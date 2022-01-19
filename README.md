@@ -2,6 +2,7 @@
 
 Em andamento Janeiro/2022
 
+<<<<<<< HEAD
 Aplicativo desenvolvido em Flutter
 
 Consultório - Clientes - Histórico - Agendamento - Pagamentos
@@ -10,6 +11,17 @@ Agendamento - Notificações
 
 Flutter 2.8
 
+=======
+
+Aplicativo desenvolvido em Flutter
+
+Consultório - Clientes - Histórico - Agendamento - Pagamentos
+Histórico - Texto e Fotos dos Tratamentos
+Agendamento - Notificações
+
+Flutter 2.8
+
+>>>>>>> c49bf3e19de93a846b6b0e778d2eeace09671ba5
 Building with sound null safety 
 No issues found.
 Running Gradle task 'assembleRelease'...                          103,2s

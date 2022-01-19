@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     );
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Vera1',
+      title: 'Consultorio',
       theme: Temas.light,
       darkTheme: Temas.dark,
       themeMode: ThemeService().theme,

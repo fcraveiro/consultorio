@@ -12,12 +12,12 @@ class Menu extends StatefulWidget {
 }
 
 final box = GetStorage();
-Color cor1 = Colors.orange;
-Color corTexto1 = Colors.white;
-Color cor2 = Colors.orange;
-Color corTexto2 = Colors.white;
-Color cor3 = Colors.orange;
-Color corTexto3 = Colors.white;
+
+Color corTexto1 = Colors.black;
+Color cor1 = Colors.green.shade400;
+Color cor2 = Colors.green.shade400;
+Color cor3 = Colors.green.shade400;
+
 int dentistaAtual = 1;
 
 class _MenuState extends State<Menu> {
@@ -42,6 +42,7 @@ class _MenuState extends State<Menu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade200,
       appBar: AppBar(
         title: const Text('Menu'),
         centerTitle: true,
@@ -66,6 +67,7 @@ class _MenuState extends State<Menu> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                    elevation: 7,
                     fixedSize: const Size(40, 40),
                     primary: cor1,
                     onSurface: Colors.black,
@@ -86,6 +88,7 @@ class _MenuState extends State<Menu> {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                    elevation: 7,
                     fixedSize: const Size(40, 40),
                     primary: cor2,
                     onSurface: Colors.black,
@@ -96,7 +99,7 @@ class _MenuState extends State<Menu> {
                   child: Text(
                     '2',
                     style: GoogleFonts.montserrat(
-                      color: corTexto2,
+                      color: Colors.black,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -106,6 +109,7 @@ class _MenuState extends State<Menu> {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                    elevation: 7,
                     fixedSize: const Size(40, 40),
                     primary: cor3,
                     onSurface: Colors.black,
@@ -116,7 +120,7 @@ class _MenuState extends State<Menu> {
                   child: Text(
                     '3',
                     style: GoogleFonts.montserrat(
-                      color: corTexto3,
+                      color: Colors.black,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -147,39 +151,31 @@ class _MenuState extends State<Menu> {
   }
 
   escolha1() {
-    cor1 = Colors.orange;
-    corTexto1 = Colors.black;
-    cor2 = Colors.green.shade800;
-    corTexto2 = Colors.white;
-    cor3 = Colors.green.shade800;
-    corTexto3 = Colors.white;
+    limpa();
+    cor1 = Colors.white;
     box.write('dentistaAtual', 1);
     log(dentistaAtual.toString());
     setState(() {});
   }
 
   escolha2() {
-    cor1 = Colors.green.shade800;
-    corTexto1 = Colors.white;
-    cor2 = Colors.orange;
-    corTexto2 = Colors.black;
-    cor3 = Colors.green.shade800;
-    corTexto3 = Colors.white;
+    limpa();
+    cor2 = Colors.white;
     box.write('dentistaAtual', 2);
-    log(dentistaAtual.toString());
     setState(() {});
   }
 
   escolha3() {
-    cor1 = Colors.green.shade800;
-    corTexto1 = Colors.white;
-    cor2 = Colors.green.shade800;
-    corTexto2 = Colors.white;
-    cor3 = Colors.orange;
-    corTexto3 = Colors.black;
+    limpa();
+    cor3 = Colors.white;
     box.write('dentistaAtual', 3);
-    log(dentistaAtual.toString());
     setState(() {});
+  }
+
+  limpa() {
+    cor1 = Colors.green.shade400;
+    cor2 = Colors.green.shade400;
+    cor3 = Colors.green.shade400;
   }
 }
 

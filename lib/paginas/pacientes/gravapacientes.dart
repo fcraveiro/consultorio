@@ -1,5 +1,8 @@
 import 'package:consultorio/model/pacientes.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../../setup.dart';
 import '/services/conectar.dart';
 
 class GravaPaciente extends StatefulWidget {
@@ -20,7 +23,56 @@ class _MostraFormPacienteState extends State<GravaPaciente> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pacientes'),
+        elevation: 0,
+        title: Text(
+          'Confirmar Cadastro',
+          style: GoogleFonts.montserratAlternates(
+            fontSize: 21,
+            fontWeight: FontWeight.w400,
+            letterSpacing: 0.0,
+          ),
+        ),
+        actions: [
+          Row(
+            children: [
+              GestureDetector(
+                onTap: () => {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Setup(),
+                      )),
+                },
+                child: Container(
+                  width: 45,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      12,
+                    ),
+                    border: Border.all(
+                      color: const Color(0xFF757575),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      FaIcon(
+                        FontAwesomeIcons.bars,
+                        size: 16,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 15,
+              ),
+            ],
+          )
+        ],
+        centerTitle: true,
+        backgroundColor: const Color(0xFF48426D),
       ),
       body: SafeArea(
         child: Padding(
@@ -33,13 +85,13 @@ class _MostraFormPacienteState extends State<GravaPaciente> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   Text(
                     ' Confira os Dados Digitados',
                     style: TextStyle(
                       fontFamily: 'Arial',
                       fontSize: 18,
-                      color: Colors.yellow.withOpacity(0.8),
+                      color: Color(0xFF48426D),
                     ),
                   ),
                 ],
@@ -64,19 +116,19 @@ class _MostraFormPacienteState extends State<GravaPaciente> {
                   children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.greenAccent, // background
-                        onPrimary: Colors.red, // foreground
-                      ),
+                          primary: Colors.green, // background
+                          onPrimary: Colors.white, // foreground
+                          fixedSize: const Size(145, 30)),
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
-                      child: const Text('Editar'),
+                      child: const Text('Voltar a Editar'),
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.pink, // background
-                        onPrimary: Colors.red, // foreground
-                      ),
+                          primary: const Color(0xFF48426D), // background
+                          onPrimary: Colors.white, // foreground
+                          fixedSize: const Size(145, 30)),
                       onPressed: () {
                         _showToast(context);
                         conectar.addPaciente(form);
@@ -121,9 +173,9 @@ class _MostraFormPacienteState extends State<GravaPaciente> {
                     child: Text(
                       campo.toString(),
                       textAlign: TextAlign.start,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 16,
-                        color: Colors.red,
+                        color: Colors.black.withOpacity(.7),
                       ),
                     ),
                   ),
@@ -143,7 +195,7 @@ class _MostraFormPacienteState extends State<GravaPaciente> {
                     descricao,
                     textAlign: TextAlign.start,
                     style: TextStyle(
-                      backgroundColor: Colors.purple,
+                      backgroundColor: Colors.white,
                       fontSize: 12,
                       color: Colors.blue.shade500,
                     ),
@@ -201,9 +253,9 @@ class _MostraFormPacienteState extends State<GravaPaciente> {
                               child: Text(
                                 campo.toString(),
                                 textAlign: TextAlign.start,
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontSize: 16,
-                                  color: Colors.red,
+                                  color: Colors.black.withOpacity(.7),
                                 ),
                               ),
                             ),
@@ -223,7 +275,7 @@ class _MostraFormPacienteState extends State<GravaPaciente> {
                               descricao,
                               textAlign: TextAlign.start,
                               style: TextStyle(
-                                backgroundColor: Colors.purple,
+                                backgroundColor: Colors.white,
                                 fontSize: 12,
                                 color: Colors.blue.shade500,
                               ),
@@ -259,7 +311,7 @@ class _MostraFormPacienteState extends State<GravaPaciente> {
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
                                   fontSize: 16,
-                                  color: Colors.red,
+                                  color: Colors.black54,
                                 ),
                               ),
                             ),
@@ -290,13 +342,13 @@ class _MostraFormPacienteState extends State<GravaPaciente> {
     scaffold.showSnackBar(
       const SnackBar(
         elevation: 10,
-        backgroundColor: Colors.pink,
+        backgroundColor: Color(0xFF48426D),
         duration: Duration(seconds: 2),
         content: Text(
           'Aguarde Salvando !!',
           style: TextStyle(
             fontSize: 20,
-            color: Colors.red,
+            color: Colors.white,
           ),
           textAlign: TextAlign.center,
         ),

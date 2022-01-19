@@ -1,16 +1,24 @@
 # consultorio
 
-A new Flutter project.
+Janeiro/2022
 
-## Getting Started
+Aplicativo desenvolvido em Flutter
 
-This project is a starting point for a Flutter application.
+Consultório - Clientes - Histórico - Agendamento - Pagamentos
+Histórico - Texto e Fotos dos Tratamentos
+Agendamento - Notificações
 
-A few resources to get you started if this is your first Flutter project:
+Flutter 2.8
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Building with sound null safety 
+No issues found.
+Running Gradle task 'assembleRelease'...                          103,2s
+√  Built build\app\outputs\flutter-apk\app-release.apk (20.7MB).
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[√] Flutter (Channel stable, 2.8.2-0.0.pre.1, on Microsoft Windows [versÃ£o 10.0.22000.434], locale pt-BR)
+[√] Android toolchain - develop for Android devices (Android SDK version 32.0.0)
+
+ext.kotlin_version = '1.6.10'
+classpath 'com.android.tools.build:gradle:7.0.4'
+distributionUrl=https\://services.gradle.org/distributions/gradle-7.0.2-all.zip
+

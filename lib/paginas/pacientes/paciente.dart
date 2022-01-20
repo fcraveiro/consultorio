@@ -160,9 +160,54 @@ class _PacienteState extends State<Paciente> {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
                 child: Column(
-                  children: const [],
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                        'UuID               ${filteredPacientes[index].pacUuId.toString()}'),
+                    Text(
+                        'Dentista         ${filteredPacientes[index].pacDentista.toString()}'),
+                    Text(
+                        'Nome             ${filteredPacientes[index].pacNome.toString()}'),
+                    Text(
+                        'Endereço       ${filteredPacientes[index].pacEnde.toString()}'),
+                    Text(
+                        'Cidade           ${filteredPacientes[index].pacCity.toString()}'),
+                    Text(
+                        'Estado           ${filteredPacientes[index].pacEst.toString()}'),
+                    Text(
+                        'Cep                ${filteredPacientes[index].pacCep.toString()}'),
+                    Text(
+                        'Fone              ${filteredPacientes[index].pacFone.toString()}'),
+                    Text(
+                        'Celular           ${filteredPacientes[index].pacCel.toString()}'),
+                    Text(
+                        'Zap1               ${filteredPacientes[index].pacZap1.toString()}'),
+                    Text(
+                        'Zap2               ${filteredPacientes[index].pacZap2.toString()}'),
+                    Text(
+                        'Favorito          ${filteredPacientes[index].pacFavorito.toString()}'),
+                    Text(
+                        'Tratando        ${filteredPacientes[index].pacTratando.toString()}'),
+                    Text(
+                        'Remarcado    ${filteredPacientes[index].pacRemarcado.toString()}'),
+                    Text(
+                        'Completo       ${filteredPacientes[index].pacCompleto.toString()}'),
+                    Text(
+                        'Aviso 1           ${filteredPacientes[index].pacAviso1.toString()}'),
+                    Text(
+                        'Aviso 2           ${filteredPacientes[index].pacAviso2.toString()}'),
+                    Text(
+                        'Aviso 3           ${filteredPacientes[index].pacAviso3.toString()}'),
+                    Text(
+                        'Aviso 4           ${filteredPacientes[index].pacAviso4.toString()}'),
+                    Text(
+                        'Aviso 5           ${filteredPacientes[index].pacAviso5.toString()}'),
+                    Text(
+                        'Aviso 6           ${filteredPacientes[index].pacAviso6.toString()}'),
+                  ],
                 ),
               ),
             ),
